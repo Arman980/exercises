@@ -38,7 +38,15 @@
       </v-col>
 
       <v-col cols="12">
+<v-col cols="12">
         <b>Value of newMsg:</b> {{ newMsg }}
+        <v-card>
+          <v-card-text>
+            <v-text-field v-model="newMsg" label="Vue"></v-text-field>
+          </v-card-text>
+        </v-card>
+      </v-col>
+  
       </v-col>
     </v-row>
 
@@ -123,7 +131,8 @@ export default {
   name: 'ExerciseOne',
 
   data: () => ({
-    msg: 'Hello'
+    msg: 'Hello',
+    newMsg: 'Bye'
   })
 }
 </script>
