@@ -38,7 +38,7 @@
       </v-col>
 
       <v-col cols="12">
-<v-col cols="12">
+        <v-col cols="12">
         <b>Value of newMsg:</b> {{ newMsg }}
         <v-card>
           <v-card-text>
@@ -57,13 +57,28 @@
         <h2>Part 3</h2>
         Now, type in "Vue.js rocks!" for the msg text field and see what happens...
       </v-col>
-      <v-col cols="6" v-if="msg=='Vue.js rocks!'">
-        <v-img
-        alt="hayko"
-        src="../assets/hayko.jpg"
-        max-width="500"
-        max-height="300"/>
+      <v-col cols="12" v-if="msg=='Vue.js rocks!'">
+        <v-row>
+          <v-col cols="6">
+            <v-img
+            alt="hayko"
+            src="../assets/hayko.jpg"
+            max-width="500"
+            max-height="300"/>
+          </v-col>
+          <v-col cols="6">
+            <v-img
+            alt="mko"
+            src="../assets/mko.jpeg"
+            max-width="500"
+            max-height="300"/>
+          </v-col>
+        </v-row>
       </v-col>
+      <p v-else-if="msg=='Vue.js kinda rocks!'">
+        Vue.js kinda rocks
+     </p>
+
     </v-row>
 
     <v-divider class="my-4"/>
@@ -91,7 +106,7 @@
     <v-row>
       <v-col cols="12">
         <h2>Part 6</h2>
-        Add an HTML element using v-else-if that will pop up if msg is "Vue.js kinda rocks!"
+         Add an HTML element using v-else-if that will pop up if msg is "Vue.js kinda rocks!"
       </v-col>
     </v-row>
 
